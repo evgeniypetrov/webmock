@@ -174,8 +174,8 @@ if defined?(Curl)
           http_without_webmock(method)
         end
       end
-      alias_method :http_without_webmock, :http
-      alias_method :http, :http_with_webmock
+      #alias_method :http_without_webmock, :http
+      #alias_method :http, :http_with_webmock
 
       %w[ get head delete ].each do |verb|
         define_method "http_#{verb}_with_webmock" do
